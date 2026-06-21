@@ -5,7 +5,7 @@ import exterior from "../assets/services/exterior.jpeg";
 import residential from "../assets/services/residential.jpeg";
 import commercial from "../assets/services/commercial.jpeg";
 import waterproofing from "../assets/services/waterproofing.jpeg";
-import repainting from "../assets/services/Repainting.jpeg";
+import repainting from "../assets/services/repainting.jpeg";
 import jetwash from "../assets/services/jetwash.jpeg";
 import woodPolish from "../assets/services/woodpolish.jpeg";
 
