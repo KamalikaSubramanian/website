@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/reviews";
+
 
 const useReviewStore = create((set) => ({
   reviews: [],
@@ -11,7 +11,7 @@ const useReviewStore = create((set) => ({
     try {
       set({ loading: true });
 
-      const res = await axios.get(API_URL);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/reviews`);
 
       set({
         reviews: res.data,
@@ -31,7 +31,7 @@ const useReviewStore = create((set) => ({
       set({ loading: true });
 
       const res = await axios.post(
-        API_URL,
+        `${import.meta.env.VITE_API_URL}/api/reviews`,
         formData,
         {
           headers: {
