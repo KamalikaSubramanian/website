@@ -238,7 +238,7 @@ export default function Testimonials() {
                                     className="group flex-shrink-0 w-56 h-56 rounded-2xl overflow-hidden border border-white/10 bg-slate-900"
                                   >
                                     <img
-                                      src={`http://localhost:5000${image}`}
+                                      src={`${import.meta.env.VITE_API_URL}${image}`}
                                       alt={`Review ${index + 1}`}
                                       className="w-full h-full object-contain cursor-pointer transition duration-500 group-hover:scale-105"
                                       onClick={() => {
