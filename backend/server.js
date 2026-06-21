@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://website-weld-one-13.vercel.app/",
+      "https://website-weld-one-13.vercel.app",
     ],
     credentials: true,
   })
