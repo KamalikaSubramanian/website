@@ -292,7 +292,7 @@ export default function Testimonials() {
                                     className="group flex-shrink-0 w-56 h-56 rounded-2xl overflow-hidden border border-white/10 bg-slate-900"
                                   >
                                     <img
-                                      src={`${import.meta.env.VITE_API_URL}/${image}`}
+                                      src={image}
                                       alt={`Review ${index + 1}`}
                                       className="w-full h-full object-contain cursor-pointer transition duration-500 group-hover:scale-105"
                                       onClick={() => {
@@ -346,7 +346,7 @@ export default function Testimonials() {
 
               {/* Image */}
               <img
-                src={`${import.meta.env.VITE_API_URL}/${selectedImage}`}
+                src={selectedImage}
                 alt="Enlarged Review"
                 className="max-h-[85vh] max-w-full object-contain rounded-xl select-none"
                 draggable={false}
