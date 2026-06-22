@@ -142,46 +142,59 @@ export default function Testimonials() {
                           : review._id
                       )
                     }
-                    className="w-full p-6 text-left"
+                    className="w-full p-4 md:p-6 text-left"
                   >
-                    <div className="flex justify-between gap-4">
+                    <div className="flex flex-col gap-4">
 
-                      {/* Left Side */}
-                      <div className="flex gap-4">
-                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center text-deepblue font-bold text-xl">
-                          {review.name.charAt(0)}
-                        </div>
+                      {/* Top Row */}
+                      <div className="flex justify-between items-start gap-3">
 
-                        <div>
-                          <h3 className="font-bold text-white text-lg">
-                            {review.name}
-                          </h3>
+                        {/* User */}
+                        <div className="flex gap-3 min-w-0">
 
-                          <p className="text-sm text-slate-400">
-                            {review.location}
-                          </p>
-
-                          <div className="mt-1 text-xs uppercase tracking-widest text-green-400">
-                            Verified Customer
+                          <div
+                            className="
+          w-12 h-12
+          md:w-14 md:h-14
+          flex-shrink-0
+          rounded-full
+          bg-gradient-to-br
+          from-accent
+          to-orange-400
+          flex
+          items-center
+          justify-center
+          text-deepblue
+          font-bold
+          text-lg
+        "
+                          >
+                            {review.name.charAt(0)}
                           </div>
-                        </div>
-                      </div>
 
-                      {/* Right Side */}
-                      <div className="flex flex-col items-end justify-center gap-3">
+                          <div className="min-w-0">
 
-                        {/* Stars */}
-                        <div className="flex text-yellow-400 text-2xl md:text-3xl leading-none">
-                          {Array(review.rating)
-                            .fill(0)
-                            .map((_, i) => (
-                              <span
-                                key={i}
-                                className="drop-shadow-[0_0_8px_rgba(255,215,0,0.6)]"
-                              >
-                                ★
-                              </span>
-                            ))}
+                            <h3
+                              className="
+            text-white
+            font-bold
+            text-base
+            md:text-lg
+            truncate
+          "
+                            >
+                              {review.name}
+                            </h3>
+
+                            <p className="text-xs md:text-sm text-slate-400">
+                              {review.location}
+                            </p>
+
+                            <p className="text-[10px] md:text-xs uppercase tracking-wider text-green-400 mt-1">
+                              Verified Customer
+                            </p>
+
+                          </div>
                         </div>
 
                         {/* Arrow */}
@@ -193,18 +206,59 @@ export default function Testimonials() {
                                 : 0
                           }}
                           transition={{ duration: 0.3 }}
-                          className="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent"
+                          className="
+        w-8 h-8
+        md:w-10 md:h-10
+        rounded-full
+        bg-accent/10
+        border
+        border-accent/20
+        flex
+        items-center
+        justify-center
+        text-accent
+        flex-shrink-0
+      "
                         >
                           ▼
                         </motion.div>
 
                       </div>
 
-                    </div>
+                      {/* Stars */}
+                      <div className="flex items-center gap-1">
 
-                    <p className="mt-5 text-xl text-slate-300 leading-7">
-                      {review.review}
-                    </p>
+                        {Array(review.rating)
+                          .fill(0)
+                          .map((_, i) => (
+                            <span
+                              key={i}
+                              className="
+            text-yellow-400
+            text-xl
+            md:text-2xl
+            drop-shadow-[0_0_8px_rgba(255,215,0,0.5)]
+          "
+                            >
+                              ★
+                            </span>
+                          ))}
+                      </div>
+
+                      {/* Review */}
+                      <p
+                        className="
+      text-sm
+      md:text-base
+      text-slate-300
+      leading-6
+      line-clamp-3
+    "
+                      >
+                        {review.review}
+                      </p>
+
+                    </div>
                   </button>
 
                   {/* Expand Content */}
@@ -292,7 +346,7 @@ export default function Testimonials() {
 
               {/* Image */}
               <img
-                src={`http://localhost:5000${selectedImage}`}
+                src={`${import.meta.env.VITE_API_URL}${selectedImage}`}
                 alt="Enlarged Review"
                 className="max-h-[85vh] max-w-full object-contain rounded-xl select-none"
                 draggable={false}

@@ -5,6 +5,7 @@ import path from "path";
 
 import { connectDB } from "./config/db.js";
 import reviewRoutes from "./routes/reviewRoutes.js";
+import quoteRoutes from "./routes/quoteRoutes.js"
 
 dotenv.config();
 
@@ -32,6 +33,10 @@ app.use(
 app.use(
     "/api/reviews",
     reviewRoutes
+);
+app.use(
+  "/api/quotes",
+  quoteRoutes
 );
 
 app.get("/", (req, res) => {
