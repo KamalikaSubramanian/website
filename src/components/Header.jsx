@@ -5,7 +5,8 @@ import logo from "../assets/logo.jpeg";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const whatsappMessage =
+    "Hello Dhanalakshmi Painting Contractor 🎨✨\n\n🏡 Excited to transform my property with a fresh and elegant new look!\nLooking forward to connecting with your team ✨ ";
   return (
     <header className="sticky top-0 z-50 bg-deepblue/95 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
@@ -94,7 +95,7 @@ export default function Header() {
             </a>
 
             <a
-              href="https://wa.me/919941588083"
+              href={`https://api.whatsapp.com/send?phone=919941588083&text=${encodeURIComponent(whatsappMessage)}`}
               target="_blank"
               rel="noreferrer"
               className="px-4 py-2 rounded-xl bg-green-600 text-white font-semibold hover:bg-green-500 transition"

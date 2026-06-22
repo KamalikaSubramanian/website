@@ -28,8 +28,8 @@ export const createReview =
         rating,
         review,
       } = req.body;
-        console.log(req.files)
-        console.log(req.body)
+      console.log(req.files)
+      console.log(req.body)
       if (
         !name ||
         !rating ||
@@ -55,7 +55,8 @@ export const createReview =
           review,
           images,
         });
-
+        
+      console.log("REVIEW SAVED:", review);
       res
         .status(201)
         .json(newReview);

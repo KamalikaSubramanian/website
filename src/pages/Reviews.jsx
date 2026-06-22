@@ -363,7 +363,6 @@ export default function Reviews() {
                     </button>
                   </motion.div>
                 )}
-                {/* <button type="button" onClick={() => setFormData(prev => ({ ...prev, imagePreview: null }))} className="mt-2 text-xs text-red-400 hover:text-red-300">✕ Remove</button> */}
               </motion.div>
             )}
           </motion.div>

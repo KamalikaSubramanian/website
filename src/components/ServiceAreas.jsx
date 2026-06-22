@@ -23,6 +23,8 @@ const itemVariants = {
 }
 
 export default function ServiceAreas(){
+    const whatsappMessage =
+    "Hello Dhanalakshmi Painting Contractor 🎨✨\n\n🏡 Excited to transform my property with a fresh and elegant new look!\nLooking forward to connecting with your team ✨ ";
   return (
     <section className="max-w-6xl mx-auto px-4 py-14">
       <motion.div 
@@ -88,7 +90,7 @@ export default function ServiceAreas(){
         >
           <p className="text-slate-200">Don't see your area? <span className="font-semibold text-accent">Contact us</span> to discuss your project location.</p>
           <motion.a 
-            href="https://wa.me/919941588083?text=Hello%20Dhanalakshmi%20Painting%20Contractor,%20I'm%20interested%20in%20painting%20services." 
+            href={`https://api.whatsapp.com/send?phone=919941588083&text=${encodeURIComponent(whatsappMessage)}`}
             target="_blank" 
             rel="noreferrer" 
             whileHover={{ scale: 1.1 }}
