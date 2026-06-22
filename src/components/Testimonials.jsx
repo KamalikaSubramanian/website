@@ -286,27 +286,35 @@ export default function Testimonials() {
                           {review.images?.length > 0 && (
                             <div className="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
                               {review.images.map(
-                                (image, index) => (
-                                  <div
-                                    key={index}
-                                    className="group flex-shrink-0 w-56 h-56 rounded-2xl overflow-hidden border border-white/10 bg-slate-900"
-                                  >
-                                    <img
-                                      src={image}
-                                      alt={`Review ${index + 1}`}
-                                      className="w-full h-full object-contain cursor-pointer transition duration-500 group-hover:scale-105"
-                                      onClick={() => {
-                                        setSelectedImages(
-                                          review.images
-                                        );
-                                        setCurrentIndex(index);
-                                        setSelectedImage(
-                                          image
-                                        );
-                                      }}
-                                    />
-                                  </div>
-                                )
+                                (image, index) => {
+                                  console.log(image);
+
+                                  return (
+                                    <div
+                                      key={index}
+                                      className="group flex-shrink-0 w-56 h-56 rounded-2xl overflow-hidden border border-white/10 bg-slate-900"
+                                    >
+                                      <img
+                                        src={image}
+                                        alt={`Review ${index + 1}`}
+                                        className="w-full h-full object-contain cursor-pointer transition duration-500 group-hover:scale-105"
+                                        onClick={() => {
+                                          setSelectedImages(
+                                            review.images
+                                          );
+                                          setCurrentIndex(index);
+                                          setSelectedImage(
+                                            image
+                                          );
+                                        }}
+                                        onError={(e) => {
+                                          console.log("Image failed:", image);
+                                        }}
+
+                                      />
+                                    </div>
+                                  )
+                                }
                               )}
                             </div>
                           )}
@@ -348,6 +356,10 @@ export default function Testimonials() {
               <img
                 src={selectedImage}
                 alt="Enlarged Review"
+                onError={(e) => {
+                  console.log("Image failed:", image);
+                }}
+
                 className="max-h-[85vh] max-w-full object-contain rounded-xl select-none"
                 draggable={false}
                 onTouchStart={(e) =>
