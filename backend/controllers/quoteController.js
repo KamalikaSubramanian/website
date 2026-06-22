@@ -9,7 +9,7 @@ export const submitQuote = async (
     const quote =
       await Quote.create(req.body);
 
-    // await sendQuoteMail(quote);
+    await sendQuoteMail(quote);
 
     res.status(200).json({
       success: true,
@@ -21,7 +21,7 @@ export const submitQuote = async (
 
     res.status(500).json({
       success: false,
-      message: "erro.message",
+      message: error.message,
     });
   }
 };

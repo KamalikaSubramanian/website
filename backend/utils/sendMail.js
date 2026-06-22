@@ -1,36 +1,38 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
+const resend = new Resend(
+  process.env.RESEND_API_KEY
+);
 
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+export const sendQuoteMail = async (
+  quote
+) => {
+  await resend.emails.send({
+    from:
+      "onboarding@resend.dev",
 
-export const sendQuoteMail = async (quote) => {
-  await transporter.verify();
+    to:
+      "jaikumardhanush18@gmail.com",
 
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,
-
-    subject: "New Quote Request",
+    subject:
+      "New Painting Quote Request",
 
     html: `
       <h2>New Painting Quote Request</h2>
 
       <p><strong>Name:</strong> ${quote.name}</p>
-      <p><strong>Mobile:</strong> ${quote.mobileNumber}</p>
-      <p><strong>Email:</strong> ${quote.email}</p>
-      <p><strong>Property Type:</strong> ${quote.propertyType}</p>
-      <p><strong>Location:</strong> ${quote.projectLocation}</p>
-      <p><strong>Requirements:</strong> ${quote.additionalRequirements}</p>
-    `,
-  };
 
-  await transporter.sendMail(mailOptions);
+      <p><strong>Mobile Number:</strong> ${quote.mobileNumber}</p>
+
+      <p><strong>Email:</strong> ${quote.email}</p>
+
+      <p><strong>Property Type:</strong> ${quote.propertyType}</p>
+
+      <p><strong>Project Location:</strong> ${quote.projectLocation}</p>
+
+      <p><strong>Additional Requirements:</strong></p>
+
+      <p>${quote.additionalRequirements || "None"}</p>
+    `,
+  });
 };
