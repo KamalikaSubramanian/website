@@ -21,7 +21,7 @@ export const submitQuote = async (
 
     res.status(500).json({
       success: false,
-      message: "Server Error",
+      message: "erro.message",
     });
   }
 };
