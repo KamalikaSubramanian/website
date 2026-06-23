@@ -61,11 +61,12 @@ export default function Services() {
 
         <div className="relative max-w-6xl mx-auto px-4 text-center">
           <p className="uppercase tracking-[0.35em] text-accent text-sm">
-            Professional Painting Services
+            Complete Painting Solutions
           </p>
 
           <h1 className="mt-4 text-4xl md:text-5xl font-bold text-white">
-            Complete Painting Solutions
+            Professional Painting Services
+
           </h1>
 
           <p className="mt-5 max-w-3xl mx-auto text-slate-300 leading-8">
@@ -103,7 +104,7 @@ export default function Services() {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full max-w-[400px] object-contain rounded-3xl hover:scale-105 transition-all duration-500"/>
+                    className="w-full max-w-[400px] object-contain rounded-3xl hover:scale-105 transition-all duration-500" />
                 </div>
               </div>
               {/* Content */}

@@ -108,7 +108,9 @@ export default function Home() {
                     <p className="text-xs uppercase tracking-[0.3em] text-accent">Premium Supplier</p>
                     <p className="mt-2 text-lg font-semibold text-white">Asian Paints Partner</p>
                   </div>
-                  <div className="h-14 w-14 rounded-3xl bg-white/10 flex items-center justify-center text-white text-lg font-bold border border-white/10">AP</div>
+                  <div className="h-14 w-14 rounded-3xl bg-accent/10 flex items-center justify-center text-accent text-xl font-bold border border-accent/20">
+                    ✓
+                  </div>
                 </div>
                 <div className="rounded-3xl bg-slate-950/70 p-4 text-center border border-white/10">
                   <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Certified Service</p>

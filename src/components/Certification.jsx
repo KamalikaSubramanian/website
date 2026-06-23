@@ -61,7 +61,7 @@ export default function Certification() {
 
         <div className="mt-12">
           <div className="rounded-3xl border border-accent/20 bg-white/5 p-8 text-center">
-            <h2 className="text-2xl font-bold text-white">
+            <h2 className="text-2xl font-bold text-accent">
               Verified Asian Paints Professional
             </h2>
 

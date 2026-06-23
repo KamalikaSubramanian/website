@@ -51,7 +51,7 @@ export default function PaintingProcess() {
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-accent/10" />
 
-        <div className="relative max-w-5xl mx-auto px-4 text-center">
+        <div className="relative max-w-5xl mx-auto px-4 text-center ">
           <p className="uppercase tracking-[0.35em] text-accent text-sm">
             Our Workflow
           </p>
@@ -69,7 +69,7 @@ export default function PaintingProcess() {
       </section>
 
       {/* Steps */}
-      <section className="max-w-5xl mx-auto px-4 pb-16">
+      <section className="max-w-5xl mx-auto mt-10 px-4 pb-16">
         <div className="relative">
 
           {/* Vertical Line */}

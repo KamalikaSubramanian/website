@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function QuoteForm() {
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate()
   const [successMessage, setSuccessMessage] =
     useState("");
 
@@ -133,6 +134,10 @@ export default function QuoteForm() {
           additionalRequirements:
             "",
         });
+        
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
 
         setErrors({});
 
@@ -427,139 +432,4 @@ export default function QuoteForm() {
     </section>
   );
 }
-//nwga khvu vcto wdyt
-
-// import React from 'react'
-
-// export default function QuoteForm() {
-//   const [formData, setFormData] = useState({
-//   name: "",
-//   mobileNumber: "",
-//   email: "",
-//   propertyType: "",
-//   projectLocation: "",
-//   additionalRequirements: "",
-// });
-//   const handleSubmit = async (e) => {
-//   e.preventDefault();
-
-//   const response =
-//     await fetch(
-//       `${import.meta.env.VITE_API_URL}/api/quotes/submit`,
-//       {
-//         method: "POST",
-
-//         headers: {
-//           "Content-Type":
-//             "application/json",
-//         },
-
-//         body: JSON.stringify({
-//           name,
-//           phone,
-//           email,
-//           service,
-//           location,
-//           message,
-//         }),
-//       }
-//     );
-
-//   const data =
-//     await response.json();
-
-//   if (data.success) {
-//     alert(
-//       "Quote submitted successfully"
-//     );
-//   }
-// };
-//   return (
-//     <form
-//       action="https://formsubmit.co/jaikumardhanush18@gmail.com"
-//       method="POST"
-//       className="max-w-3xl bg-white/5 p-6 rounded mx-auto"
-//     >
-//       <input
-//         type="hidden"
-//         name="_subject"
-//         value="New Painting Quote Request"
-//       />
-
-//       <input
-//         type="hidden"
-//         name="_captcha"
-//         value="false"
-//       />
-
-//       <input
-//         type="hidden"
-//         name="_template"
-//         value="table"
-//       />
-
-//       <input
-//         type="hidden"
-//         name="_next"
-//         value="https://yourdomain.com/thank-you"
-//       />
-
-//       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-//         <input
-//           name="Full Name"
-//           placeholder="Full Name"
-//           required
-//           className="p-2 rounded bg-white/10"
-//         />
-
-//         <input
-//           name="Mobile Number"
-//           placeholder="Mobile Number"
-//           required
-//           className="p-2 rounded bg-white/10"
-//         />
-
-//         <input
-//           type="email"
-//           name="Email Address"
-//           placeholder="Email Address"
-//           required
-//           className="p-2 rounded bg-white/10 md:col-span-2"
-//         />
-
-//         <select
-//           name="Property Type"
-//           required
-//           className="p-2 rounded bg-white/10"
-//         >
-//           <option value="">Property Type</option>
-//           <option>Home</option>
-//           <option>Apartment</option>
-//           <option>Commercial</option>
-//         </select>
-
-//         <input
-//           name="Project Location"
-//           placeholder="Project Location"
-//           required
-//           className="p-2 rounded bg-white/10"
-//         />
-//       </div>
-
-//       <textarea
-//         name="Additional Requirements"
-//         placeholder="Additional Requirements"
-//         className="w-full p-2 rounded bg-white/10 mt-4"
-//       />
-
-//       <div className="mt-4 text-right">
-//         <button
-//           type="submit"
-//           className="bg-accent text-deepblue px-4 py-2 rounded-md font-semibold"
-//         >
-//           Request Free Quote
-//         </button>
-//       </div>
-//     </form>
-//   )
-// }
+//App-Password: nwga khvu vcto wdyt

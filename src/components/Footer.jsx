@@ -134,10 +134,8 @@ export default function Footer() {
 
               {/* Address */}
               <div className="flex items-start justify-center md:justify-start gap-3">
-                <span className="text-lg">📍</span>
-
                 <span className="max-w-xs">
-                  Aziz Nagar 1st Street,
+                  📍 Aziz Nagar 1st Street,
                   Kodambakkam,
                   Chennai - 600024
                 </span>

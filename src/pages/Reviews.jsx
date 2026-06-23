@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
-import useReviewStore from '../store/reviewStore.js'
-import { motion } from 'framer-motion'
-import Testimonials from '../components/Testimonials'
+import useReviewStore from '../store/reviewStore.js';
+import { motion } from 'framer-motion';
+import Testimonials from '../components/Testimonials.jsx';
+import { useNavigate } from "react-router-dom";
+
 
 export default function Reviews() {
   const [formData, setFormData] = useState({ name: '', location: '', rating: 0, review: '', imagePreview: [] })
   const [errors, setErrors] = useState({});
   const [imageError, setImageError] =
     useState('');
-  const [hoveredRating, setHoveredRating] = useState(0)
+  const [hoveredRating, setHoveredRating] = useState(0);
   const createReview = useReviewStore(
     (state) => state.createReview
-  )
-
+  );
+  const navigate = useNavigate();
   const [selectedFile, setSelectedFile] =
-    useState([])
+    useState([]);
   const validateForm = () => {
     const newErrors = {};
 
@@ -161,15 +163,21 @@ export default function Reviews() {
         rating: 0,
         review: '',
         imagePreview: [],
-      })
+      });
+
       setErrors({});
       setImageError("");
-      setSelectedFile([])
+
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+
+      setSelectedFile([]);
     }
   }
   const loading = useReviewStore(
     (state) => state.loading
-  )
+  );
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-12">
