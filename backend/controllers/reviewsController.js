@@ -1,6 +1,6 @@
 import Review from "../models/reviewModel.js";
 import cloudinary from "../config/cloudinary.js";
-
+import sharp from "sharp";
 
 export const getReviews = async (
   req,
@@ -47,23 +47,42 @@ export const createReview =
 
       if (req.files && req.files.length > 0) {
         for (const file of req.files) {
-          const uploadResult = await new Promise(
+
+          const compressedBuffer =
+            await sharp(file.buffer)
+              .resize({
+                width: 1800,
+                withoutEnlargement: true,
+              })
+              .jpeg({
+                quality: 85,
+              })
+              .toBuffer();
+
+          const result = await new Promise(
             (resolve, reject) => {
               cloudinary.uploader
                 .upload_stream(
                   {
                     folder: "reviews",
+
+                    transformation: [
+                      {
+                        quality: "auto",
+                        fetch_format: "auto",
+                      },
+                    ],
                   },
                   (error, result) => {
                     if (error) reject(error);
                     else resolve(result);
                   }
                 )
-                .end(file.buffer);
+                .end(compressedBuffer);
             }
           );
 
-          images.push(uploadResult.secure_url);
+          images.push(result.secure_url);
         }
       }
 
@@ -81,7 +100,7 @@ export const createReview =
         .status(201)
         .json(newReview);
     } catch (error) {
-      console.error("Clopundinary error:",error);
+      console.error("Clopundinary error:", error);
 
       res.status(500).json({
         message:

@@ -48,7 +48,7 @@ export default function Reviews() {
       "image/webp",
     ];
 
-    const maxSize = 5 * 1024 * 1024; // 5MB
+    const maxSize = 25 * 1024 * 1024; // 5MB
 
     // Validate file type and size
     for (const file of newFiles) {
@@ -307,7 +307,7 @@ export default function Reviews() {
                 >
                   <div className="text-4xl mb-2">📷</div>
                   <p className="text-sm text-gray-300">Click to upload or drag & drop</p>
-                  <p className="text-xs text-gray-400 mt-1">PNG, JPG, WEBP up to 5MB</p>
+                  <p className="text-xs text-gray-400 mt-1">PNG, JPG, WEBP up to 25MB</p>
                 </label>
                 <input
                   id="imageUpload"
