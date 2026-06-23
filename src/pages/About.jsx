@@ -42,7 +42,7 @@ export default function About() {
             <h1
               className="
       text-5xl
-      md:text-6xl
+      md:text-4xl
       font-black
       leading-tight
       bg-gradient-to-r
@@ -91,7 +91,7 @@ export default function About() {
         text-center
       "
               >
-                <h3 className="text-3xl font-black text-accent">
+                <h3 className="text-2xl font-black text-accent">
                   18+
                 </h3>
                 <p className="text-sm text-gray-300">
@@ -109,7 +109,7 @@ export default function About() {
         text-center
       "
               >
-                <h3 className="text-3xl font-black text-accent">
+                <h3 className="text-2xl font-black text-accent">
                   500+
                 </h3>
                 <p className="text-sm text-gray-300">
@@ -127,7 +127,7 @@ export default function About() {
         text-center
       "
               >
-                <h3 className="text-3xl font-black text-accent">
+                <h3 className="text-2xl font-black text-accent">
                   100%
                 </h3>
                 <p className="text-sm text-gray-300">
