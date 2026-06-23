@@ -41,8 +41,8 @@ export default function About() {
 
             <h1
               className="
-      text-5xl
-      md:text-4xl
+      text-3xl
+      md:text-2xl
       font-black
       leading-tight
       bg-gradient-to-r
