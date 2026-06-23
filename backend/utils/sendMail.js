@@ -134,7 +134,7 @@ export const sendQuoteMail = async (
   try {
     const customerMail = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: quote.email,
+      to: "jaikumardhanush18@gmail.com",
       subject: "Thank you for contacting Dhanalakshmi Painting Contractor",
       html: `...`,
     });
