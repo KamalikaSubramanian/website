@@ -136,7 +136,40 @@ export const sendQuoteMail = async (
       from: "onboarding@resend.dev",
       to: "jaikumardhanush18@gmail.com",
       subject: "Thank you for contacting Dhanalakshmi Painting Contractor",
-      html: `...`,
+      html: `
+      <div style="font-family:Arial,sans-serif;max-width:600px">
+
+        <h2>
+          Thank you, ${quote.name}! 🎉
+        </h2>
+
+        <p>
+          We have received your quote request.
+        </p>
+
+        <p>
+          Our team will contact you shortly regarding your painting project.
+        </p>
+
+        <hr>
+
+        <h3>Your Submitted Details</h3>
+
+        <p><strong>Property Type:</strong> ${quote.propertyType}</p>
+
+        <p><strong>Project Location:</strong> ${quote.projectLocation}</p>
+
+        <p><strong>Mobile:</strong> ${quote.mobileNumber}</p>
+
+        <hr>
+
+        <p>
+          Regards,<br>
+          <strong>Dhanalakshmi Painting Contractor</strong>
+        </p>
+
+      </div>
+    `,
     });
 
     console.log("Customer Mail:", customerMail);
@@ -144,6 +177,5 @@ export const sendQuoteMail = async (
   catch (err) {
     console.log("Customer mail error", err.message)
   }
-
 
 };
