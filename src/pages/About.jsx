@@ -145,27 +145,13 @@ export default function About() {
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-accent/20 blur-3xl rounded-full" />
 
             <div className="relative z-10 space-y-4">
-
-              <div className="grid grid-cols-2 gap-4">
-
-                <div className="h-[320px] overflow-hidden rounded-3xl shadow-2xl group">
-                  <img
-                    src={painterHome}
-                    alt=""
-                    className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-                </div>
-
-                <div className="h-[320px] overflow-hidden rounded-3xl shadow-2xl group">
-                  <img
-                    src={luxuryLivingRoom}
-                    alt=""
-                    className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-                </div>
-
+              <div className="h-[240px] overflow-hidden rounded-3xl shadow-2xl group">
+                <img
+                  src={luxuryLivingRoom}
+                  alt=""
+                  className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                />
               </div>
-
               <div className="h-[240px] overflow-hidden rounded-3xl shadow-2xl group">
                 <img
                   src={colorConsultation}
@@ -187,11 +173,7 @@ export default function About() {
         {/* WHY CHOOSE US */}
         <div className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-2xl shadow-black/20">
 
-          <img
-            src={accentWall}
-            alt=""
-            className="w-full h-72 object-cover hover:scale-105 transition duration-700"
-          />
+
 
           <div className="p-8 md:p-10">
 
@@ -239,6 +221,11 @@ export default function About() {
             </ul>
 
           </div>
+          <img
+            src={accentWall}
+            alt=""
+            className="w-full h-72 object-cover hover:scale-105 transition duration-700"
+          />
 
         </div>
 
@@ -254,10 +241,60 @@ export default function About() {
           shadow-accent/10
         ">
 
-              <img
-                src={colorWall}
-                alt="Color Wall"
-                className="
+
+
+          <div className="p-8">
+
+            <div className="
+              uppercase
+              tracking-[0.24em]
+              text-l
+              text-accent
+            ">
+              Trusted by Homeowners
+            </div>
+
+            <h3 className="
+              mt-4
+              text-2xl
+              font-semibold
+              text-white
+            ">
+              Premium Interior Finishes
+            </h3>
+
+            <p className="
+              mt-4
+              text-gray-300
+              leading-7
+            ">
+              We have delivered high-quality finishes
+              for apartments, villas, offices, retail
+              showrooms and commercial spaces.
+            </p>
+
+            <div className="
+              mt-6
+              space-y-3
+              text-gray-200
+            ">
+
+              <p>✓ Premium Accent Walls</p>
+
+              <p>✓ Luxury Living Room Finishes</p>
+
+              <p>✓ Waterproofing Solutions</p>
+
+              <p>✓ Modern Color Consultation</p>
+
+              <p>✓ Long-lasting Exterior Protection</p>
+
+            </div>
+          </div>
+          <img
+            src={colorWall}
+            alt="Color Wall"
+            className="
               w-full
               h-64
               object-cover
@@ -265,61 +302,9 @@ export default function About() {
               transition
               duration-700
             "
-              />
-
-              <div className="p-8">
-
-                <div className="
-              uppercase
-              tracking-[0.24em]
-              text-l
-              text-accent
-            ">
-                  Trusted by Homeowners
-                </div>
-
-                <h3 className="
-              mt-4
-              text-2xl
-              font-semibold
-              text-white
-            ">
-                  Premium Interior Finishes
-                </h3>
-
-                <p className="
-              mt-4
-              text-gray-300
-              leading-7
-            ">
-                  We have delivered high-quality finishes
-                  for apartments, villas, offices, retail
-                  showrooms and commercial spaces.
-                </p>
-
-                <div className="
-              mt-6
-              space-y-3
-              text-gray-200
-            ">
-
-                  <p>✓ Premium Accent Walls</p>
-
-                  <p>✓ Luxury Living Room Finishes</p>
-
-                  <p>✓ Waterproofing Solutions</p>
-
-                  <p>✓ Modern Color Consultation</p>
-
-                  <p>✓ Long-lasting Exterior Protection</p>
-
-                </div>
-              </div>
-
+          />
         </div>
-
       </div>
-
     </section>
   );
 }
