@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.jpeg";
+import logo from "../../public/logo.jpeg"
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
