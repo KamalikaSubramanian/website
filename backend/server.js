@@ -16,7 +16,8 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://website-weld-one-13.vercel.app",
-      "https://www.dhanalakshmipainting.com"
+      "https://dhanalakshmipainting.com",
+      "https://www.dhanalakshmipainting.com",
     ],
     credentials: true,
   })
