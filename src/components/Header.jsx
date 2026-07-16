@@ -74,6 +74,17 @@ export default function Header() {
             </NavLink>
 
             <NavLink
+              to="/testimonials"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-xl text-accent font-semibold"
+                  : "text-xl text-white hover:text-accent transition"
+              }
+            >
+              Reviews
+            </NavLink>
+
+            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive
@@ -159,6 +170,17 @@ export default function Header() {
                 }
               >
                 Services
+              </NavLink>
+
+              <NavLink
+                to="/testimonials"
+                className={({ isActive }) =>
+                  isActive
+                    ? " block text-xl text-accent font-semibold"
+                    : " block text-xl text-white hover:text-accent transition"
+                }
+              >
+                Reviews
               </NavLink>
 
               <NavLink

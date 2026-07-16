@@ -11,20 +11,22 @@ import Contact from './pages/Contact.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Certification from './components/Certification.jsx'
+import Testimonials from './components/Testimonials.jsx'
 
-export default function App(){
+export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-deepblue/95 to-deepblue">
       <Header />
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/services" element={<Services/>} />
-          <Route path="/reviews" element={<Reviews/>} />
-          <Route path="/quote" element={<Quote/>} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/certification" element={<Certification/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/quote" element={<Quote />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/certification" element={<Certification />} />
+          <Route path="/testimonials" element={<Testimonials />} />
         </Routes>
       </main>
       <Footer />
