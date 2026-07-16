@@ -174,6 +174,7 @@ export default function Header() {
 
               <NavLink
                 to="/testimonials"
+                onClick={() => setMenuOpen(false)}
                 className={({ isActive }) =>
                   isActive
                     ? " block text-xl text-accent font-semibold"
