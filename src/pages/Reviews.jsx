@@ -169,7 +169,7 @@ export default function Reviews() {
       setImageError("");
 
       setTimeout(() => {
-        navigate("/");
+        navigate("/reviewsList");
       }, 2000);
 
       setSelectedFile([]);

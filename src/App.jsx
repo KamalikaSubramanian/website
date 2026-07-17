@@ -12,6 +12,7 @@ import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Certification from './components/Certification.jsx'
 import Testimonials from './components/Testimonials.jsx'
+import ReviewsList from './pages/ReviewsList.jsx'
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/certification" element={<Certification />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/reviewsList" element={<ReviewsList />} />
         </Routes>
       </main>
       <Footer />
