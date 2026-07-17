@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
-    const whatsappMessage =
+  const whatsappMessage =
     "Hello Dhanalakshmi Painting Contractor 🎨✨\n\n🏡 Excited to transform my property with a fresh and elegant new look!\nLooking forward to connecting with your team ✨ ";
   return (
     <footer className="max-w-7xl mx-auto px-4 py-8 md:py-12">
@@ -66,6 +66,26 @@ export default function Footer() {
                   Services
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="/quote"
+                  className="text-slate-300 hover:text-accent transition"
+                >
+                  Quote
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/testimonials"
+                  className="text-slate-300 hover:text-accent transition"
+                >
+                  Reviews
+                </Link>
+              </li>
+
+
 
               <li>
                 <Link
